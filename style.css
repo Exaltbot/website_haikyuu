@@ -1,0 +1,381 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.background {
+    background-image: url('C:/Users/Acer/Desktop/WEBSITE_HAIKYUU/images/homeBTR.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    height: 100vh; 
+    width: 100%; 
+    position: fixed; 
+}
+
+.image-transparent {
+    background-image: url('C:/Users/Acer/Desktop/WEBSITE_HAIKYUU/images/your-image.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 60vh; 
+    width: 65%; 
+    position: absolute; 
+    margin-top: 274px;
+    top: 90; 
+    left: 93; 
+    z-index: 1; 
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease, filter 0.4s ease;
+}
+
+.image-transparent:hover {
+    transform: scale(1.1); 
+    opacity: 1; 
+    filter: brightness(1.5); 
+    filter: saturate(150%);
+}
+
+.image-title:hover {
+    opacity: 1; 
+    filter: brightness(3); 
+    filter: saturate(200%);
+}
+
+.logo {
+    margin-top: 1px;
+    margin-left: 55px;
+    width: 120px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.navbar {
+    width: 100%;
+    margin: auto;
+    padding: 5px 0;
+    text-emphasis:inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000; 
+      
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 30px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #df5703;
+    font-weight: bold;
+}
+
+.navbar ul li a::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background:#df5703;
+    position: absolute;
+    left: 0;
+    bottom:-4px;
+    transition: 0.4s;
+}
+.navbar ul li a:hover::after{
+    width: 100%;
+}
+
+.image-title {
+    position: absolute;
+    top: 23%; 
+    left: 81%; 
+    transform: translate(-50%, -50%); 
+    width: 340px;
+    height: 135px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+}
+
+.content {
+    margin-top: 11%;
+    margin-right: 120px;
+    font-size: 16px;
+    color: #333;
+    text-align: right;
+}
+
+.btn{
+    padding: 10px 20px;
+    color: #000000;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+    margin-left: 84.3%;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease, filter 0.4s ease;
+}
+
+.btn::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #df5703;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #0a0a0a;
+    font-weight: bold;
+}
+
+.btn a:hover::after{
+    width: 100%;
+}
+
+.btn:hover{
+    transform: scale(1.3); 
+    opacity: 1; 
+    filter: brightness(9); 
+    filter: saturate(600%);
+}
+
+/* movies */
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; 
+    padding: 20px;
+}
+
+.card {
+    margin-top: 20px;
+    width: 230px;
+    height: 280px;
+    padding: 2rem 1rem;
+    background: #fff;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+
+.card:hover {
+    transform: translateY(20px);
+}
+
+.card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(205, 70, 21, 0.497), rgb(210, 110, 0));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+}
+
+.card:hover:before {
+    opacity: 1;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card .info {
+    position: relative;
+    z-index: 3;
+    color: #090909;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+}
+
+.card:hover .info {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.card .info h1 {
+    margin: 0;
+    font-size: 20px;
+    color: #000000;
+}
+
+
+.card .info p {
+    letter-spacing: 1px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+/* teams */
+.maq {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.color-change {
+    font-size: 3rem;
+    text-shadow: #0a0a0a;
+    margin-top: 15px;
+    font-weight: bold;
+    animation: colorChange 5s infinite alternate;
+}
+
+@keyframes colorChange {
+    0% {
+        color: #ec632e; 
+    }
+    25% {
+        color: #ec3818; 
+    }
+    50% {
+        color: #ffa033; 
+    }
+    75% {
+        color: #ff6933; 
+    }
+    100% {
+        color: #ff5733; 
+    }
+}
+.Twrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Tcontainer {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.tcard {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.tcard > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.tcard > .row > .icon {
+    background: #dd6012;
+    color: #000000;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.tcard > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 1;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description p {
+    color: #0a0a0a;
+    padding-top: 5px;
+}
+
+.description h4 {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: #fff; 
+    font-size: 1.2em; 
+    background: rgba(0, 0, 0, 0.6); 
+    border-radius: 2px; 
+    width: 250px; 
+    text-align: center;  
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 600px;
+}
+
+input:checked + label .description {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+label[for="gif"] {
+    background-image: url(images/teams/quiick.gif);
+}
+label[for="c"] {
+    background-image: url(images/teams/FHAIKYUU.jpg);
+}
+
+label[for="c1"] {
+    background-image: url(images/teams/KARASUUNO.png);
+}
+
+label[for="c2"] {
+    background-image: url(images/teams/nekoma.jpg);
+}
+
+label[for="c3"] {
+    background-image: url(images/teams/aobaa.jpg);
+}
+
+label[for="c4"] {
+    background-image: url(images/teams/Fukurōdani.jpg);
+}
+
+label[for="c5"] {
+    background-image: url(images/teams/tsukk.jpeg);
+}
